@@ -1,0 +1,45 @@
+<h2>Варианты визуального фона для сайта «ЗАЛ»</h2>
+<p class="subtitle">Все варианты сохраняют светлый, теплый дизайн. Отличается только характер: спокойнее, пластичнее или премиальнее.</p>
+
+<div class="cards">
+  <div class="card" data-choice="soft-motion" onclick="toggleSelect(this)">
+    <div class="card-image" style="height:190px;background:radial-gradient(circle at 20% 25%, rgba(93,107,78,.22), transparent 28%), radial-gradient(circle at 80% 35%, rgba(185,155,125,.25), transparent 30%), linear-gradient(135deg,#FAF9F7,#F3EFE7);position:relative;overflow:hidden">
+      <div style="position:absolute;inset:24px;border:1px solid rgba(93,107,78,.14);border-radius:28px"></div>
+      <div style="position:absolute;left:28px;bottom:28px;font-size:28px;font-weight:700;color:#1A1A1A">ЗАЛ</div>
+      <div style="position:absolute;right:26px;top:30px;width:120px;height:120px;border-radius:999px;border:18px solid rgba(93,107,78,.08)"></div>
+    </div>
+    <div class="card-body">
+      <h3>A. Мягкое движение</h3>
+      <p>Текущая эстетика, но фон богаче: размытые световые пятна, тонкие линии, ощущение воздуха и движения.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="dance-lines" onclick="toggleSelect(this)">
+    <div class="card-image" style="height:190px;background:linear-gradient(135deg,#FBFAF8,#EFE8DD);position:relative;overflow:hidden">
+      <svg viewBox="0 0 360 190" style="position:absolute;inset:0;width:100%;height:100%">
+        <path d="M-20 150 C60 40 120 220 210 80 S330 30 390 130" fill="none" stroke="rgba(93,107,78,.23)" stroke-width="3"/>
+        <path d="M-20 95 C65 10 130 170 215 60 S320 65 390 30" fill="none" stroke="rgba(185,155,125,.25)" stroke-width="2"/>
+        <circle cx="285" cy="72" r="42" fill="rgba(93,107,78,.08)"/>
+      </svg>
+      <div style="position:absolute;left:28px;bottom:28px;font-size:28px;font-weight:700;color:#1A1A1A">Танец в линиях</div>
+    </div>
+    <div class="card-body">
+      <h3>B. Линии танца</h3>
+      <p>Более тематично: абстрактные кривые как след движения. Узнаваемо, но не кричаще.</p>
+    </div>
+  </div>
+
+  <div class="card" data-choice="premium-grid" onclick="toggleSelect(this)">
+    <div class="card-image" style="height:190px;background:linear-gradient(135deg,#F7F2EA,#FFFFFF);position:relative;overflow:hidden">
+      <div style="position:absolute;inset:0;background-image:linear-gradient(rgba(93,107,78,.08) 1px, transparent 1px),linear-gradient(90deg, rgba(93,107,78,.08) 1px, transparent 1px);background-size:28px 28px;mask-image:radial-gradient(circle at 50% 50%, black, transparent 78%)"></div>
+      <div style="position:absolute;right:32px;top:28px;background:rgba(255,255,255,.72);border:1px solid rgba(93,107,78,.12);border-radius:20px;padding:18px;box-shadow:0 18px 50px rgba(93,107,78,.10)">100 м²<br><strong>от 600₽</strong></div>
+      <div style="position:absolute;left:28px;bottom:28px;font-size:28px;font-weight:700;color:#1A1A1A">Чистая премиальность</div>
+    </div>
+    <div class="card-body">
+      <h3>C. Премиальная сетка</h3>
+      <p>Строже и дороже: деликатная сетка, карточки, больше ощущения студийности и порядка.</p>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle">Моя рекомендация: A или B. Для танцевального зала B чуть живее, A безопаснее и ближе к текущему сайту.</p>

@@ -1,0 +1,51 @@
+{
+  "name": "dance-space-zal",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc --noCheck && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "test": "vitest run --configLoader runner"
+  },
+  "dependencies": {
+    "@emailjs/browser": "^3.12.1",
+    "@heroui/react": "2.7.9",
+    "@iconify/react": "latest",
+    "@internationalized/date": "3.8.1",
+    "@react-aria/i18n": "3.12.9",
+    "firebase": "^11.9.0",
+    "framer-motion": "^11.18.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^7.17.0",
+    "source-map-js": "^1.2.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.26.10",
+    "@babel/generator": "^7.27.0",
+    "@babel/preset-react": "^7.26.3",
+    "@babel/preset-typescript": "^7.27.0",
+    "@babel/traverse": "^7.27.0",
+    "@babel/types": "^7.27.0",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "autoprefixer": "10.4.20",
+    "postcss": "8.4.49",
+    "tailwindcss": "3.4.17",
+    "typescript": "5.7.3",
+    "vite": "^6.0.11",
+    "vitest": "^4.1.8"
+  },
+  "overrides": {
+    "@internationalized/date": "3.8.1",
+    "@react-aria/i18n": "3.12.9"
+  },
+  "resolutions": {
+    "@internationalized/date": "3.8.1",
+    "@react-aria/i18n": "3.12.9"
+  }
+}

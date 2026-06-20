@@ -1,0 +1,16 @@
+name = "zal-dance-api"
+main = "src/index.ts"
+compatibility_date = "2024-01-01"
+
+[vars]
+FRONTEND_URL = "https://zal.dance"
+
+# Secrets (set via wrangler secret put):
+# YOOKASSA_SHOP_ID
+# YOOKASSA_SECRET_KEY
+# FIREBASE_PROJECT_ID
+# FIREBASE_CLIENT_EMAIL
+# FIREBASE_PRIVATE_KEY
+# EMAILJS_SERVICE_ID
+# EMAILJS_TEMPLATE_ID
+# EMAILJS_PUBLIC_KEY

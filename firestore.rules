@@ -1,0 +1,40 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    // Bookings - публичное создание и обновление для процесса оплаты
+    match /bookings/{bookingId} {
+      allow read: if true;
+      allow create: if true;
+      allow update: if true;
+      allow delete: if isSignedIn();
+    }
+
+    // Blocked slots - авторизованные пользователи могут управлять
+    match /blockedSlots/{blockedSlotId} {
+      allow read: if true;
+      allow create, update, delete: if isSignedIn();
+    }
+
+    // Public availability - только чтение
+    match /publicAvailability/{dateId} {
+      allow read: if true;
+      allow write: if isSignedIn();
+    }
+
+    // Payment events - только авторизованные
+    match /paymentEvents/{eventId} {
+      allow read, write: if isSignedIn();
+    }
+
+    // Admin users - только для себя
+    match /adminUsers/{userId} {
+      allow read: if isSignedIn() && request.auth.uid == userId;
+      allow write: if false;
+    }
+  }
+}

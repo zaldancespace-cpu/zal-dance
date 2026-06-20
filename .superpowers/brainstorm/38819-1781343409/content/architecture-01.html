@@ -1,0 +1,37 @@
+<h2>План системы бронирования для танцевального зала</h2>
+<p class="subtitle">Сначала согласуем безопасную архитектуру: бронь подтверждается только после оплаты, письма уходят клиенту и администратору.</p>
+
+<div class="section">
+  <div class="mockup">
+    <div class="mockup-header">Поток бронирования</div>
+    <div class="mockup-body" style="display:grid;gap:14px">
+      <div style="display:grid;grid-template-columns:repeat(5,1fr);gap:10px;align-items:stretch">
+        <div class="placeholder"><strong>1. Клиент</strong><br>выбирает дату, слоты, тип занятия</div>
+        <div class="placeholder"><strong>2. Форма</strong><br>контакты + согласия + итоговая сумма</div>
+        <div class="placeholder"><strong>3. Сервер</strong><br>создает pending-заказ и платеж ЮKassa</div>
+        <div class="placeholder"><strong>4. ЮKassa</strong><br>принимает оплату и шлет webhook</div>
+        <div class="placeholder"><strong>5. Подтверждение</strong><br>бронь confirmed + email клиенту/админу</div>
+      </div>
+      <p style="margin:0;color:#6b7280"><strong>Ключевой принцип:</strong> клиентский сайт не хранит секреты ЮKassa и не подтверждает бронь сам. Это делает backend после webhook.</p>
+    </div>
+  </div>
+</div>
+
+<div class="options">
+  <div class="option" data-choice="recommended" onclick="toggleSelect(this)">
+    <div class="letter">A</div>
+    <div class="content">
+      <h3>Рекомендуемый путь</h3>
+      <p>Vite-сайт + Firebase Firestore + serverless-функции для ЮKassa/email. Надежно для продакшена и не светит секреты.</p>
+    </div>
+  </div>
+  <div class="option" data-choice="quick" onclick="toggleSelect(this)">
+    <div class="letter">B</div>
+    <div class="content">
+      <h3>Быстрый прототип</h3>
+      <p>Сначала чистим дизайн, Firebase и письма, оплату временно оставляем ручной/тестовой. Быстрее, но не финальный бизнес-флоу.</p>
+    </div>
+  </div>
+</div>
+
+<p class="subtitle">Можно кликнуть вариант, но главный вопрос я задам в чате: где будем размещать backend для ЮKassa?</p>
